@@ -1,0 +1,11 @@
+<p>content-projection works!</p>
+<ng-content></ng-content> 
+<ng-content select="[description]"></ng-content>
+<ng-content select="[role]"></ng-content>
+
+<!-- Single slot - When only 1 container is to be rendered. when select attribute comes up in the picture, 
+along with different containers => MultiSlot Content projection. -->
+
+<div *ngIf="adminRef">
+    <template [ngTemplateOutlet] = "adminRef"></template>
+</div>
